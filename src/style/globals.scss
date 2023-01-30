@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Inter:wght@400;800&display=swap");
+$colorBg: #313131;
+$colorBg2: #000029;
+$colorBg3: #00001b;
+$cardColor: #000053;
+$cardColor2: #0000cc;
+$textcolor: #ccc;
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  color: $textcolor;
+}
+body {
+  background: linear-gradient(
+    90deg,
+    $colorBg2 0%,
+    rgba(9, 9, 121, 1) 35%,
+    $colorBg3 100%
+  );
+}
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock_Container,
+.clock_Container div,
+.clock_Container span,
+header,
+.stopwatch,
+.stopWatch_clock,
+.timer_container,
+.timer_result,
+.timer_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock_Container div {
+  flex-direction: column;
+  margin: 0 5vw;
+}
+.clock_Container span {
+  width: 20vw;
+  height: 30vh;
+  background-color: $cardColor;
+  border: 1px solid $colorBg;
+  font-family: "Aboreto", cursive;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.3);
+  background: linear-gradient(180deg, $cardColor 0%, $cardColor2 100%);
+  margin-top: 1vh;
+}
+header {
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid $colorBg;
+  justify-content: space-around;
+}
+.menu {
+  list-style: none;
+  display: flex;
+}
+.menu li {
+  margin-left: 0.5rem;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-color: $textcolor;
+    transition: 1s;
+    cursor: pointer;
+  }
+}
+.link {
+  text-decoration: none;
+}
+button {
+  padding: 0.5rem 1.2rem;
+  background-color: $cardColor2;
+  margin: 5vh 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid $colorBg;
+  cursor: pointer;
+  &:hover {
+    background-color: $cardColor;
+    transition: 0.5s;
+  }
+}
+.stopwatch_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stopwatch {
+  flex-direction: column;
+}
+.stopWatch_clock {
+  width: 30vw;
+  height: 40vh;
+  background: linear-gradient(180deg, $cardColor 0%, $cardColor2 100%);
+  text-align: center;
+  border-radius: 0.5rem;
+  margin: 10vh auto 0 auto;
+  font-size: 2rem;
+  border: 0.5px solid $colorBg;
+  box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.5);
+}
+.stopWatch_clock span {
+  margin: 0 1vw;
+  font-family: "Aboreto", cursive;
+}
+.timer_container {
+  width: 100vw;
+  height: 90vh;
+  flex-direction: column;
+}
+.timer_result {
+  display: flex;
+  width: 20vw;
+  height: 20vh;
+  border: 1px solid $colorBg;
+  margin: 2vh auto;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-family: "Aboreto", cursive;
+}
+.timer_form {
+  width: 20vw;
+  height: 20vh;
+  font-family: "Aboreto", cursive;
+}
+.timer_form input {
+  width: 10vw;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  margin: 0 0.5rem;
+  background-color: $cardColor2;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.buttons {
+  display: flex;
+}
+.time_form div {
+  display: flex;
+  flex-direction: column;
+}
