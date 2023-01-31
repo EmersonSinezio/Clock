@@ -1,65 +1,60 @@
 import { useState, useEffect } from "react";
 
 function Timer() {
-  let [numberOne, setNumberOne] = useState(0);
-  let [numberTwo, setNumberTwo] = useState(0);
-  let [actived, setActived] = useState(false);
+  let [minutes, setMinutes] = useState(0);
+  let [seconds, setSeconds] = useState(0);
+  let [actived, setActived] = useState(false)
   const start = () => {
-    setActived((actived = true));
+   setActived( actived = true)
   };
   const stop = () => {
-    setActived((actived = false));
+   setActived( actived = false) 
   };
-  // NumberOne Minutes
-  //NumberTwo Seconds
-
+  // minutes Minutes
+  //seconds setSeconds
   const numbers = (e) => {
     let element = e.target;
-    element.id == "numberOne"
-      ? setNumberOne((numberOne = element.value))
+    element.id == "minutes"
+      ? setMinutes((minutes = element.value))
       : element.value <= 60
-      ? setNumberTwo((numberTwo = element.value))
-      : setNumberTwo((numberTwo = 59))((element.value = 59));
+      ? setSeconds((seconds = element.value))
+      : setSeconds((seconds = 59))((element.value = 59));
   };
-  useEffect(() => {
     const timerStart = () => {
-      if (actived == true) {
-        if (numberTwo == 0) {
-          if (numberOne == 0) {
-            setActived((actived = false));
-            setNumberOne((numberOne = 0));
-            setNumberTwo((numberTwo = 0));
-            alert("Acabou");
-          } else {
-            setNumberOne(numberOne - 1);
-            setNumberTwo((numberTwo = 59));
+      if(actived == true){
+        if(seconds > 0){
+          setSeconds(seconds -= 1)
+        }else{
+          if(minutes > 0){
+            setMinutes(minutes -= 1)
+            setSeconds(seconds = 59)
+          }else{
+            stop()
           }
-        } else {
-          setNumberTwo((numberTwo -= 1));
         }
       }
     };
-    if (actived == true) {
+    if (actived != false) {
       setInterval(timerStart, 1000);
     }
-  }, [actived]);
+  
   return (
     <div className="timer_container">
       <div className="timer_result">
         <h1>
-          {numberOne < 10
-            ? numberOne == 0
+          {minutes < 10
+            ? minutes == 0
               ? "0" + "0"
-              : "0" + numberOne
-            : numberOne}
+              : "0" + minutes
+            : minutes}
           :
         </h1>
         <h1>
-          {numberTwo < 10
-            ? numberTwo == 0
+          {seconds < 10
+            ? seconds == 0
               ? "0" + "0"
-              : "0" + numberTwo
-            : numberTwo}
+              : "0" + seconds
+            : seconds}
         </h1>
       </div>
       <form className="timer_form">
@@ -68,7 +63,7 @@ function Timer() {
           <input
             type="text"
             placeholder="00"
-            id="numberOne"
+            id="minutes"
             onBlur={(e) => numbers(e)}
             max="60"
           />
@@ -78,7 +73,7 @@ function Timer() {
           <input
             type="text"
             placeholder="00"
-            id="numberTwo"
+            id="seconds"
             onBlur={(e) => numbers(e)}
             max="60"
           />

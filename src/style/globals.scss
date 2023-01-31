@@ -123,6 +123,7 @@ button {
   width: 100vw;
   height: 90vh;
   flex-direction: column;
+  font-family: "Aboreto", cursive;
 }
 .timer_result {
   display: flex;
@@ -137,7 +138,6 @@ button {
 .timer_form {
   width: 20vw;
   height: 20vh;
-  font-family: "Aboreto", cursive;
 }
 .timer_form input {
   width: 10vw;
@@ -153,6 +153,8 @@ button {
   display: flex;
 }
 .time_form div {
-  display: flex;
   flex-direction: column;
+}
+.time_form div span{
+  font-size: 1.5rem;
 }

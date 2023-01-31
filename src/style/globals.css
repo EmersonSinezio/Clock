@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background: linear-gradient(90deg, #000029 0%, rgb(9, 9, 121) 35%, #00001b 100%);
+  background: linear-gradient(90deg, #000029 0%, #090979 35%, #00001b 100%);
 }
 
 .App {
@@ -72,6 +72,7 @@ header {
   margin-left: 0.5rem;
   border-bottom: 1px solid transparent;
 }
+
 .menu li:hover {
   border-color: #ccc;
   transition: 1s;
@@ -90,6 +91,7 @@ button {
   border: 1px solid #313131;
   cursor: pointer;
 }
+
 button:hover {
   background-color: #000053;
   transition: 0.5s;
@@ -126,6 +128,7 @@ button:hover {
   width: 100vw;
   height: 90vh;
   flex-direction: column;
+  font-family: "Aboreto", cursive;
 }
 
 .timer_result {
@@ -142,7 +145,6 @@ button:hover {
 .timer_form {
   width: 20vw;
   height: 20vh;
-  font-family: "Aboreto", cursive;
 }
 
 .timer_form input {
@@ -161,6 +163,9 @@ button:hover {
 }
 
 .time_form div {
-  display: flex;
   flex-direction: column;
-}/*# sourceMappingURL=globals.css.map */
+}
+
+.time_form div span {
+  font-size: 1.5rem;
+}
