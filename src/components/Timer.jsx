@@ -14,11 +14,13 @@ function Timer() {
   //seconds setSeconds
   const numbers = (e) => {
     let element = e.target;
-    element.id == "minutes"
+    if(actived == false){
+      element.id == "minutes"
       ? setMinutes((minutes = element.value))
       : element.value <= 60
       ? setSeconds((seconds = element.value))
       : setSeconds((seconds = 59))((element.value = 59));
+    }
   };
     const timerStart = () => {
       if(actived == true){
@@ -81,7 +83,6 @@ function Timer() {
       </form>
       <div className="buttons">
         <button onClick={() => start()}>Start</button>
-        <button onClick={() => stop()}>Stop</button>
       </div>
     </div>
   );
