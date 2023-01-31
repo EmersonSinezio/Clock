@@ -1,4 +1,4 @@
-<img src="https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/SneakersLogo.png"/>
+<img src="https://github.com/EmersonSinezio/Clock/blob/main/public/Readme/clockIcon.png" width="250"/>
 
 ## Projeto Clock
 
@@ -6,8 +6,8 @@ Projeto inspirado em um relógio digital
 
 ## Links
 
-- Site hospedado na Vercel: https://sneakers-dtm1t5w21-emersonsinezio.vercel.app/
-- Repositório: https://github.com/EmersonSinezio/Sneakers
+- Site hospedado na Vercel: https://clock-bu0y5c5q9-emersonsinezio.vercel.app
+- Repositório: https://github.com/EmersonSinezio/Clock
   - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
 
 ## Tecs
@@ -27,19 +27,19 @@ As tecs utilizadas para realizar o projeto:
 
 ### 1 - Quando abrir o app será recebido com a Home page
 
-![Homepage image](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Home%20page.png)
+![Homepage image](https://github.com/EmersonSinezio/Clock/blob/main/public/Readme/clock_home.png)
 
 <hr/>
 
 ### 2 - O projeto tem a função cronometro
 
-![Cart](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Product.png)
+![stopWatch](https://github.com/EmersonSinezio/Clock/blob/main/public/Readme/cronometro.png)
 
 <hr/>
 
 ### 3 - E também tem a função de timer
 
-![AboutPage](https://github.com/EmersonSinezio/Sneakers/blob/main/Readme/Cart.png)
+![Timer](https://github.com/EmersonSinezio/Clock/blob/main/public/Readme/timer.png)
 
 <hr/>
 
