@@ -6,7 +6,7 @@ Projeto inspirado em um relógio digital
 
 ## Links
 
-- Site hospedado na Vercel: https://clock-bu0y5c5q9-emersonsinezio.vercel.app
+- Site hospedado na Vercel: https://clock-opal-one.vercel.app/
 - Repositório: https://github.com/EmersonSinezio/Clock
   - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
 
