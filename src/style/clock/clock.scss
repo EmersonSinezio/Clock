@@ -1,0 +1,159 @@
+// Clock
+.clock_container {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.clock_change {
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+  & button {
+    width: 30%;
+    height: 10px;
+    background-color: #333;
+    margin: 0 8px;
+  }
+}
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid black;
+  overflow: hidden;
+  animation: show 1s;
+}
+
+.clock span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+}
+
+.hour,
+.min,
+.sec {
+  position: absolute;
+  background-color: black;
+  bottom: 50%;
+  border-radius: 10px;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+}
+
+.hour {
+  width: 10px;
+  height: 35%;
+  z-index: 1;
+  border: 1px solid $colorLightGray;
+}
+
+.min {
+  width: 8px;
+  height: 40%;
+  z-index: 2;
+  border: 1px solid $colorLightGray;
+}
+
+.sec {
+  width: 4px;
+  height: 45%;
+  z-index: 3;
+  background-color: $colorBurntOrange;
+}
+
+.clock::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  z-index: 4;
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle-buttons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.toggle-bar {
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: $colorGray;
+  cursor: pointer;
+  position: relative;
+  margin: 0 10px;
+}
+
+.toggle-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $colorLightGray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s;
+}
+
+.toggle-bar.left .toggle-button {
+  transform: translateX(0);
+}
+
+.toggle-bar.right .toggle-button {
+  transform: translateX(30px);
+  background-color: $colorLightGray;
+}
+.toggle-bar.right {
+  background-color: $colorOrangeVivid;
+}
+.digital-clock {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  width: 40vw;
+  height: 50vh;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontNeue;
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 5px rgba($color: #000000, $alpha: 0.3);
+  animation: show 1s;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.digital-clock-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.clock-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

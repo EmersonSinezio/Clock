@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&family=Inter:wght@200;400;600;800&family=Montserrat:wght@200;400;600;800&display=swap");
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorDarkGray: #222;
+$colorGray: #333;
+$colorLightGray: #ccc;
+$colorOrangeVivid: #e14d2a;
+$colorBurntOrange: #fd841f;
+$colorPaleOrange: #ffdab9;
+$themeWhite: linear-gradient(to top, $colorWhite, $colorLightGray);
+$themeBlack: linear-gradient(to top, $colorDarkGray, $colorGray);
+
+// Fonts
+
+$fontAbel: "Abel";
+$fontAnton: "Anton";
+$fontNeue: "Bebas neue";
+$fontInter: "Inter";
+$fontSerrat: "Montserrat", sans-serif;

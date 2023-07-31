@@ -1,0 +1,62 @@
+// stopwatch
+.stopwatch_container {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.timer {
+  width: 400px;
+  height: 400px;
+  border: 10px solid $colorGray;
+  background-color: $colorOrangeVivid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & h1 {
+    font-family: $fontNeue;
+    font-size: 4rem;
+  }
+}
+.buttons {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: 1vh;
+  & div {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: 16px 8px;
+    background-color: $colorOrangeVivid;
+    border-radius: 50%;
+    & svg {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      transition: opacity 0.5s;
+      &:hover {
+        opacity: 0.5;
+        transition: opacity 0.5s;
+      }
+    }
+  }
+}
+.pulse {
+  animation: pulse 3s infinite;
+}
+@keyframes pulse {
+  0% {
+    border-color: $colorGray;
+  }
+  50% {
+    border-color: rgba($color: $colorGray, $alpha: 0.5);
+  }
+  100% {
+    border-color: $colorGray;
+  }
+}

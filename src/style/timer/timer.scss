@@ -1,0 +1,161 @@
+// timer
+
+.configs {
+  width: 80vw;
+  height: 80vh;
+  border-radius: 0.5rem;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  color: $colorWhite;
+  position: fixed;
+  left: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.configs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & span {
+    font-size: 1.5rem;
+  }
+  & h3 {
+    font-size: 3rem;
+    font-family: $fontNeue;
+  }
+}
+.hidden {
+  display: none;
+}
+.timer_container {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.circle-background {
+  fill: none;
+  stroke: $colorBurntOrange;
+}
+.circle-progress {
+  stroke: $colorPaleOrange;
+  fill: none;
+}
+.close {
+  position: absolute;
+  top: 8vh;
+  left: 5vw;
+}
+.icons {
+  color: $colorWhite;
+  display: flex;
+  & svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0 0.3rem;
+    color: $colorWhite;
+    &:hover {
+      transition: 0.5s;
+      opacity: 0.5;
+    }
+    background-color: $colorOrangeVivid;
+  }
+  & .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0.4rem;
+  }
+}
+#icon {
+  padding: 0;
+  background-color: transparent;
+}
+.config {
+  color: $colorOrangeVivid;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  & div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $colorBurntOrange;
+    border: 5px solid transparent;
+    margin: 0 0.1rem;
+    transition: 0.5s;
+    &:hover {
+      transition: 0.5s;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}
+#full {
+  border-color: $colorOrangeVivid;
+  transition: 0.5s;
+}
+.circle_container {
+  background-color: #333;
+  border-radius: 100%;
+  display: flex;
+  & div {
+    & h3 {
+      font-family: $fontNeue;
+      color: $colorOrangeVivid;
+      font-size: 4rem;
+    }
+  }
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 300px;
+  border: 1px solid #d7dcdf;
+  border-radius: 10px;
+  background: $colorOrangeVivid;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #007bff;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #007bff;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #007bff;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
